@@ -6,7 +6,7 @@ const PRODUCTOS = {
     Pirita: {cantidad: 1, stock: true, envio: true, precio: 900},
 };
 
-const nombresPiedras = Object.keys(PRODUCTOS); 
+const nombresPiedras = Object.keys(PRODUCTOS);
 
 const nombreUsuario = prompt("¡Bienvenido a la tienda de piedras preciosas! Por favor, ingrese su nombre de usuario:");
 
@@ -18,8 +18,11 @@ function buscarPiedra() {
     }
 
     if (PRODUCTOS[piedraBuscada].stock) {
-        const tieneEnvio = PRODUCTOS[piedraBuscada].envio ? "y tiene envío disponible" : "pero no tiene envío disponible";
-        alert(`El precio de ${piedraBuscada} es $${PRODUCTOS[piedraBuscada].precio.toFixed(2)} ${tieneEnvio}.`);
+        let mensajeEnvio = "pero no tiene envío disponible";
+        if (PRODUCTOS[piedraBuscada].envio) {
+            mensajeEnvio = "y tiene envío disponible";
+        }
+        alert(`El precio de ${piedraBuscada} es $${PRODUCTOS[piedraBuscada].precio.toFixed(2)} ${mensajeEnvio}.`);
     } else {
         alert(`No tenemos ${piedraBuscada} en este momento.`);
     }
@@ -53,7 +56,8 @@ function calcularCostoYEnvio() {
     });
 
     if (costoTotal > 0) {
-        alert(`El costo total de las piedras seleccionadas es $${costoTotal.toFixed(2)}. Envío disponible: ${envioDisponible ? 'Sí' : 'No'}`);
+        const mensajeEnvioTotal = envioDisponible ? 'Sí' : 'No';
+        alert(`El costo total de las piedras seleccionadas es $${costoTotal.toFixed(2)}. Envío disponible: ${mensajeEnvioTotal}`);
     } else {
         alert("No se seleccionaron piedras.");
     }
