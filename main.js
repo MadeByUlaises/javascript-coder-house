@@ -6,7 +6,6 @@ const PRODUCTOS = {
     Pirita: {cantidad: 1, stock: true, envio: true, precio: 900},
 };
 
-// Función para buscar una piedra específica
 function buscarPiedra() {
     let piedraBuscada = prompt("Ingrese el nombre de la Piedra que busca:");
 
@@ -22,7 +21,6 @@ function buscarPiedra() {
     }
 }
 
-// Función para calcular el costo total y verificar el envío
 function calcularCostoYEnvio() {
     const piedrasSeleccionadas = [];
 
@@ -57,8 +55,6 @@ function calcularCostoYEnvio() {
     }
 }
 
-// Llamamos a la función para buscar una piedra individual
 buscarPiedra();
 
-// Llamamos a la función para calcular el costo total y verificar el envío
 calcularCostoYEnvio();
