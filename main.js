@@ -6,10 +6,14 @@ const PRODUCTOS = {
     Pirita: {cantidad: 1, stock: true, envio: true, precio: 900},
 };
 
-function buscarPiedra() {
-    let piedraBuscada = prompt("Ingrese el nombre de la Piedra que busca:");
+const nombresPiedras = Object.keys(PRODUCTOS); 
 
-    while (!(piedraBuscada in PRODUCTOS)) {
+const nombreUsuario = prompt("¡Bienvenido a la tienda de piedras preciosas! Por favor, ingrese su nombre de usuario:");
+
+function buscarPiedra() {
+    let piedraBuscada = prompt("Hola " + nombreUsuario + "! Ingrese el nombre de la Piedra que busca:");
+
+    while (!nombresPiedras.includes(piedraBuscada)) {
         piedraBuscada = prompt("La piedra ingresada no está en el sistema. Ingrese otra piedra:");
     }
 
@@ -28,7 +32,7 @@ function calcularCostoYEnvio() {
     while (seleccionarPiedra) {
         let piedra = prompt("Ingrese el nombre de la piedra que desea:");
 
-        if (PRODUCTOS[piedra]) {
+        if (nombresPiedras.includes(piedra)) {
             piedrasSeleccionadas.push(piedra);
         } else {
             alert("La piedra ingresada no está en el sistema.");
@@ -56,5 +60,4 @@ function calcularCostoYEnvio() {
 }
 
 buscarPiedra();
-
 calcularCostoYEnvio();
