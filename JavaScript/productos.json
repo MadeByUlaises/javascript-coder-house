@@ -1,0 +1,52 @@
+[
+    {
+        "id": "piedra-01",
+        "titulo": "Rodocrosita",
+        "imagen": "./imgs/rodocrosita.jpeg",
+        "categoria": {
+            "nombre": "Piedras",
+            "id": "Con Envio"
+        },
+        "precio": 500
+    },
+    {
+        "id": "piedra-02",
+        "titulo": "Agata",
+        "imagen": "./imgs/agata.jpeg",
+        "categoria": {
+            "nombre": "Piedras",
+            "id": "Sin Envio"
+        },
+        "precio": 289
+    },
+    {
+        "id": "piedra-03",
+        "titulo": "Topacio",
+        "imagen": "./imgs/topacio.jpeg",
+        "categoria": {
+            "nombre": "Piedras",
+            "id": "Sin Envio"
+        },
+        "precio": 130
+    },
+    {
+        "id": "piedra-04",
+        "titulo": "Cuarzo",
+        "imagen": "./imgs/cuarzo.jpeg",
+        "categoria": {
+            "nombre": "Piedras",
+            "id": "Sin Envio"
+        },
+        "precio": 876
+    },
+    {
+        "id": "piedra-05",
+        "titulo": "Pirita",
+        "imagen": "./imgs/pirita.jpeg",
+        "categoria": {
+            "nombre": "Piedras",
+            "id": "Con Envio"
+        },
+        "precio": 900
+    }
+]

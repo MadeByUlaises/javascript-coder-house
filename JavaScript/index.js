@@ -1,55 +1,11 @@
-const productos = [
-    {
-        id: "piedra-01",
-        titulo: "Rodocrosita",
-        imagen: "./imgs/rodocrosita.jpeg",
-        categoria: {
-            nombre: "Piedras",
-            id: "con envio"
-        },
-        precio: 500
-    },
-    {
-        id: "piedra-02",
-        titulo: "Agata",
-        imagen: "./imgs/agata.jpeg",
-        categoria: {
-            nombre: "Piedras",
-            id: "sin envio"
-        },
-        precio: 289
-    },
-    {
-        id: "piedra-03",
-        titulo: "Topacio",
-        imagen: "./imgs/topacio.jpeg",
-        categoria: {
-            nombre: "Piedras",
-            id: "sin envio"
-        },
-        precio: 130
-    },
-    {
-        id: "piedra-04",
-        titulo: "Cuarzo",
-        imagen: "./imgs/cuarzo.jpeg",
-        categoria: {
-            nombre: "Piedras",
-            id: "sin envio"
-        },
-        precio: 876
-    },
-    {
-        id: "piedra-05",
-        titulo: "Pirita",
-        imagen: "./imgs/pirita.jpeg",
-        categoria: {
-            nombre: "Piedras",
-            id: "con envio"
-        },
-        precio: 900
-    },
-];
+let productos = [];
+
+fetch ("./JavaScript/productos.json")
+    .then(response => response.json())
+    .then(data => {
+        productos = data;
+        cargarProductos(productos);
+    })
 
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
@@ -87,7 +43,7 @@ botonesCategorias.forEach(boton => {
         
         if (e.currentTarget.id != "todos") {
             const productoCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id);  
-            tituloPrincipal.innerText = productoCategoria.categoria.nombre;
+            tituloPrincipal.innerText = "Piedras "+ productoCategoria.categoria.id;
             console.log(productoCategoria);
         
             const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
@@ -122,6 +78,26 @@ if (productosEnCarritoLS) {
 
 
 function agregarAlCarrito(e){
+
+    Toastify({
+        text: " Producto Añadido al Carrito! ",
+        duration: 3000,
+        close: true,
+        gravity: "top", 
+        position: "right", 
+        stopOnFocus: true, 
+        offset: {
+            x: "1.5rem",
+            y: "1.5rem"
+        },
+        style: {
+        background: "linear-gradient(to right, #820933, #D84797)",
+        borderRadius: "2rem"
+        },
+        onClick: function(){} 
+    }).showToast();
+
+
     const idBoton = e.currentTarget.id;
     const productoAgregado = productos.find( producto => producto.id === idBoton);
 

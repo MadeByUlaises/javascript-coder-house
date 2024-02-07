@@ -105,6 +105,17 @@ aside{
     background-color: var(--clr-white);
     color: var(--clr-white);
 }
+
+.boton-categoria {
+    background-color: transparent;
+    border: 0;
+    font-size: .85rem;
+    color: var(--clr-white);
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
 .texto-footer{
     color: var(--clr-white);
     font-size: .85rem;
