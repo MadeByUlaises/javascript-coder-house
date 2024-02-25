@@ -89,10 +89,7 @@ aside{
     border-top-right-radius: .5rem;
     box-shadow: 0 -1rem 0 var(--clr-white);
 }
-.boton-menu > i.bi-hand-index-thumb-fill,
-.boton-menu > i.bi-hand-index-thumb{
-    transform: rotateZ(90deg);
-}
+
 .boton-carrito{
     margin-top: 2rem;
 }
@@ -116,6 +113,7 @@ aside{
     gap: 1rem;
     padding: 1rem;
 }
+
 .texto-footer{
     color: var(--clr-white);
     font-size: .85rem;
@@ -155,19 +153,32 @@ main{
     font-size: 1rem;
 }
 .producto-agregar{
-    border: 0;
     background-color: var(--clr-white);
     color: var(--clr-darkBlue);
-    padding: .5rem;
+    padding: 1rem;
     text-transform: uppercase;
     border-radius: 2rem;
     cursor: pointer;
-    border: 2px solid var(--clr-white);
-    transition: background-color .2s, color .2s;
+    border: 1px solid var(--clr-white);
+    box-shadow: 2px 2px 2px 0;
 }
 .producto-agregar:hover{
     background-color: var(--clr-white);
-    color: var(--clr-white)
+    color: var(--clr-pink)
+}
+
+.btn-suma {
+    background-color: var(--clr-darkBlue);
+    border: var(--clr-darkBlue);
+    padding: 1rem 1rem;
+    box-shadow: 2px 2px 2px 0;
+}
+
+.btn-resta {
+    background-color: var(--clr-darkBlue);
+    border: var(--clr-darkBlue);
+    padding: 1rem 1rem;
+    box-shadow: 2px 2px 2px 0;
 }
 
 /** CARRITO **/

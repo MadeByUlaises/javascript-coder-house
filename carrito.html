@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Tienda Piedras Preciosas </title>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
         <link rel="stylesheet" href="./css/main.css">
@@ -46,13 +48,19 @@
                             <p>Total:</p>
                             <p id="total">$500</p>
                         </div>
+                        <div id="resumen-compra" class="resumen-compra disabled">
+                            <h3>Resumen de Compra</h3>
+                            <p id="fecha-entrega">Fecha estimada de entrega: <span></span></p>
+                            <p>Total: <span id="total-resumen"></span></p>
+                        </div>
                         <button id="carrito-acciones-comprar" class="carrito-acciones-comprar"> Comprar Ahora! </button>
                     </div>
                 </div>
-                <p id="carrito-comprado" class="carrito-comprado disabled"> Gracias por tu Compra! </p>
+                <p id="carrito-comprado" class="carrito-comprado disabled"> Gracias por tu Compra! </p> 
             </div>
         </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./JavaScript/carrito.js"></script>
 </body>
