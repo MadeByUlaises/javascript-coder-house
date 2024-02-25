@@ -87,6 +87,7 @@ if (productosEnCarritoLS) {
 
 
 function agregarAlCarrito(e){
+    
 
     Toastify({
         text: " Producto Añadido al Carrito! ",

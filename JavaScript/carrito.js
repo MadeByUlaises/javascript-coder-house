@@ -192,6 +192,7 @@ function comprarCarrito() {
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 
     cargarProductosCarrito(); 
+    
 
     contenedorCarritoVacio.classList.add("disabled");
     contenedorCarritoProductos.classList.add("disabled");

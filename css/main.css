@@ -241,6 +241,7 @@ main{
     text-transform: uppercase;
     cursor: pointer;
 }
+
 .carrito-acciones-derecha{
     display: flex;
 }
